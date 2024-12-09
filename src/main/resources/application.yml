@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: todolist
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:mybatis-test
+    username: sa
+    password:
+
+mybatis:
+  mapper-locations: mybatis-mapper/**/*.xml
+  type-aliases-package: com.burning.todolist.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.burning.todolist: DEBUG
+
